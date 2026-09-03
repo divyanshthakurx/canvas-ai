@@ -3,6 +3,7 @@ import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@cl
 import { Geist, Geist_Mono, Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from "@/lib/utils";
+import Provider from './provider';
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -27,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en" className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}>
       <body className="min-h-full flex flex-col">
-        <ClerkProvider>
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <Show when="signed-out">
               <SignInButton />
@@ -43,9 +44,11 @@ export default function RootLayout({
               <UserButton />
             </Show>
           </header>
-          {children}
-        </ClerkProvider>
+          <Provider>
+            {children}
+          </Provider>
       </body>
     </html>
+    </ClerkProvider>
   )
 }
