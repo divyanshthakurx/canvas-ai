@@ -1,3 +1,5 @@
+import ProjectList from '@/components/custom/dashboard/ProjectList';
+import WelcomeBanner from '@/components/custom/dashboard/WelcomeBanner';
 import { auth } from '@clerk/nextjs/server';
 import { redirect} from 'next/navigation';
 
@@ -13,7 +15,18 @@ const page = async () => {
   }
 
   return (
-    <div>hello there</div>
+    <>
+      <div>
+        {/*Welcome banner*/}
+
+        <WelcomeBanner></WelcomeBanner>
+        
+        {/*Project List / Empty State*/}
+
+        <ProjectList></ProjectList>
+        
+      </div>
+    </>
   )
 }
 
