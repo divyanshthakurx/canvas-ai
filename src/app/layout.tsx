@@ -5,7 +5,7 @@ import './globals.css'
 import { cn } from "@/lib/utils";
 import Provider from './provider';
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en" className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)} suppressHydrationWarning>
+    <html lang="en" className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", geist.variable)} suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <Show when="signed-out">
