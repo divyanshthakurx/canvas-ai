@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useState } from 'react'
+import CreateNewDialog from './CreateNewDialog';
 
 function ProjectList() {
 
@@ -14,7 +15,7 @@ function ProjectList() {
         <Image src={"/folder.svg"} alt={"Folder Icon"} width={100} height={100} />
         <div className='text-2xl font-bold'>No Boards Found</div>
         <p className='text-muted-foreground'>Create your first board to start brainstorming & planning !</p>
-        <Button size={"lg"} >+ Create new canvas</Button>
+        <CreateNewDialog />
       </div>
         
     ) : // {/*set project list*/}
