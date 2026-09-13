@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { useUser } from '@clerk/nextjs'
 import { Sparkle } from 'lucide-react';
 import React from 'react'
+import CreateNewDialog from './CreateNewDialog';
 
 function WelcomeBanner() {
 
@@ -15,7 +16,7 @@ function WelcomeBanner() {
         <p>Bring your Ideas to life with infinite canvas</p>
 
         <div className='flex items-center gap-x-2 mt-5'>
-          <Button size={"lg"}>+ Create new Board</Button>
+          <CreateNewDialog />
           <Button size={"lg"} className={"bg-white"} variant={"outline"}><Sparkle />AI Assitant</Button>
         </div>
       </div>

@@ -11,9 +11,10 @@ import {
   SidebarMenuButton,
 } from "@/components/ui/sidebar"
 import { useUser } from "@clerk/nextjs";
-import { Archive, LayoutGrid, Settings, Sparkle, Users } from 'lucide-react';
+import { Archive, LayoutGrid, Plus, Settings, Sparkle, Users } from 'lucide-react';
 import Image from "next/image"
 import { usePathname } from "next/navigation";
+import CreateNewDialog from "./CreateNewDialog";
 
 export function AppSidebar() {
 
@@ -32,7 +33,7 @@ export function AppSidebar() {
       <SidebarContent>
 
         <SidebarGroup>
-          <Button>Create New Canvas</Button>
+          <CreateNewDialog />
         </SidebarGroup>
 
         <SidebarGroup>
@@ -73,7 +74,7 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter>
-        <Button>test</Button>
+        <CreateNewDialog />
         <div className="p-3 border rounded-md">
           <div className="text-sm flex justify-between items-center">2 files created <span>Total 3</span></div>
           <Progress value={69} className={"h-2 mt-2"} />
