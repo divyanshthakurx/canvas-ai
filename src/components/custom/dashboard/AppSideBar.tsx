@@ -11,7 +11,7 @@ import {
   SidebarMenuButton,
 } from "@/components/ui/sidebar"
 import { useUser } from "@clerk/nextjs";
-import { Archive, LayoutGrid, Plus, Settings, Sparkle, Users } from 'lucide-react';
+import { Archive, LayoutGrid, Settings, Sparkle, Users } from 'lucide-react';
 import Image from "next/image"
 import { usePathname } from "next/navigation";
 import CreateNewDialog from "./CreateNewDialog";

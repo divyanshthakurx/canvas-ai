@@ -42,18 +42,18 @@ const CreateNewDialog = () => {
         projectName: workspaceName,
         projectId: projectId
       });
-  
+
       console.log(result.data)
-  
+
       toast.add({
         type: "success",
         title: "New Workspace created"
       })
-      
+
       setTimeout(() => {
-        route.push(`/workspace-${projectId}`)
+        route.push(`/workspace/${projectId}`)
       }, 1000)
-    
+
     } catch (error) {
       console.error("Error occured while creating workspace", error)
     } finally {
