@@ -3,7 +3,7 @@
 import SmartDocument from '@/components/custom/workspace/SmartDocument';
 import Whiteboard from '@/components/custom/workspace/Whiteboard';
 import WorkspaceHeader from '@/components/custom/workspace/WorkspaceHeader'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const Workspace = () => {
 
